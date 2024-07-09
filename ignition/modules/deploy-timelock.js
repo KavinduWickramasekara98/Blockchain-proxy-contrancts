@@ -1,18 +1,16 @@
 const argumentsArray = require("../../arguments.js")
 async function main(){
-    let delayTime = argumentsArray[0].value
-    let proposerArray = argumentsArray[1].proposers
-    let executorsArray = argumentsArray[2].executors;
-    let admin = argumentsArray[3].admin
-
+    let delayTime = argumentsArray[0]
+    let proposerArray = argumentsArray[1]
+    let executorsArray = argumentsArray[2]
+    let admin = argumentsArray[3]
+    console.log("admin : "+admin)
     const [deployer] = await ethers.getSigners();
-    console.log(
-        "Deploying contracts with the account :"+deployer.getAddress()
-    );
-    console.log("Balance :"+(await deployer.getBalance()).toString());
+
+    const balance = await deployer.provider.getBalance(deployer.getAddress())
+    console.log("Balance: " + balance);
     const Token = await ethers.getContractFactory("TimelockController");
     const token = await Token.deploy(delayTime,proposerArray,executorsArray,admin);
-    console.log("timeLock address : "+token.getAddress())
 
 }
 

@@ -3,10 +3,10 @@
 
 pragma solidity ^0.8.20;
 
-import {AccessControl} from "@OpenZeppelin/contracts/access/AccessControl.sol";
-import {ERC721Holder} from "@OpenZeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
-import {ERC1155Holder} from "@OpenZeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol";
-import {Address} from "@OpenZeppelin/contracts/utils/Address.sol";
+import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
+import {ERC721Holder} from "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
+import {ERC1155Holder} from "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol";
+import {Address} from "@openzeppelin/contracts/utils/Address.sol";
 
 /**
  * @dev Contract module which acts as a timelocked controller. When set as the

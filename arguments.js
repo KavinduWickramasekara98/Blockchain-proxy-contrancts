@@ -1,7 +1,7 @@
 require('dotenv').config()
-module.exports = {
-    value: 150,
-    proposers: [process.env.gnosisMultisigAddress], // proposers array
-    executors: [process.env.gnosisMultisigAddress],  // executors array
-    admin:process.env.adminAddress
-};
+module.exports = [
+    150,
+    [process.env.gnosisMultisigAddress], // proposers array
+    [process.env.gnosisMultisigAddress],  // executors array
+    process.env.adminAddress
+]
