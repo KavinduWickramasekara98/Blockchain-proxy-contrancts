@@ -11,7 +11,7 @@ async function main(){
     console.log("Balance: " + balance);
     const Token = await ethers.getContractFactory("TimelockController");
     const token = await Token.deploy(delayTime,proposerArray,executorsArray,admin);
-
+    console.log("Contract deployed address : "+await token.getAddress());
 }
 
 main()
