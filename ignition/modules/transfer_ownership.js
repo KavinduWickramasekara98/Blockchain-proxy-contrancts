@@ -1,19 +1,24 @@
+const { ethers, upgrades, } = require("hardhat");
+require('dotenv').config();
+async function main() {
 
+  try {
 
-//make owner timelock-controller.So we can change code
-//timelock powerd by gnosis safe
-async function main(){
-    const newOwnerOfTheProxyAdmin = "0xfC7f2b446A5FD984f84D49F85e12F08582B02C1c";
-
-    console.log("Transferring ownership of Proxy Admin ...");
-    await upgrades.admin.transferProxyAdminOwnership(newOwnerOfTheProxyAdmin);
-    console.log("Transferred ownership of ProxyAdmin to :"+newOwnerOfTheProxyAdmin);
+    // Transfer ownership
+    //ox0000 would not work
+    await upgrades.admin.transferProxyAdminOwnership(
+      process.env.PROXY_IMPLEMENT_ADDRESS,
+      process.env.PROXY_NEW_OWNER
+    );
+    
+    
+  } catch (error) {
+    console.error("Error transferring ownership of Proxy Admin:", error);
+  }
 }
-
 main()
-.then(()=>process.exit(0))
-.catch(error=>{
+  .then(() => process.exit(0))
+  .catch((error) => {
     console.error(error);
     process.exit(1);
-}
-)
+  });

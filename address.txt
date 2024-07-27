@@ -1,0 +1,11 @@
+proxy address="0xeAa08bC6da7B099FE2C4fc58D97c233E97d85FFB"
+implementation address = "0x95F4ec8Ccc9C038fDB1edB3EF2921c7624eD6F85"
+
+admin : 0xAf2f2Aa05952D406C6f394160704BFba997198A2
+timelock = "0x780007384B72D6Ae711462483151B897AF18a0Dd"
+
+gnosisMultisigAddress = "0x7D5F3b0FE37f839f2182bEE442C484263dD3A33B"
+
+from .openzzepline newly create folder.base-sepolia.js
+
+proxy old admin address(metamusk)= "0xAf2f2Aa05952D406C6f394160704BFba997198A2"

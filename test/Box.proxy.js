@@ -3,7 +3,7 @@ const {ethers,upgrades}=require('hardhat')
 let Box;
 let box;
 
-describe("text box proxy functionality",function(){
+describe("test box proxy functionality",function(){
     beforeEach(async function(){
         Box = await ethers.getContractFactory("Box");
         //proxy contract create function and value
