@@ -7,7 +7,7 @@ async function main(){
     console.log("admin : "+admin)
     const [deployer] = await ethers.getSigners();
 
-    const balance = await deployer.provider.getBalance(deployer.getAddress())
+    const balance = await deployer.provider.getBalance(await deployer.getAddress())
     console.log("Balance: " + balance);
     const Token = await ethers.getContractFactory("TimelockController");
     const token = await Token.deploy(delayTime,proposerArray,executorsArray,admin);

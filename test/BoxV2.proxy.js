@@ -9,9 +9,8 @@ describe("V2 test proxy functionality", function () {
     BoxV2 = await ethers.getContractFactory("BoxV2");
     //proxy contract create function and value
     box = await upgrades.deployProxy(Box, [10], { initializer: "store" });
-await box.waitForDeployment();
-const boxAddress = await box.getAddress();
-    console.log("box address : " +boxAddress);
+    await box.waitForDeployment();
+    const boxAddress = await box.getAddress();
     //proxy contract create function and value
     boxV2 = await upgrades.upgradeProxy(boxAddress, BoxV2);
   });
