@@ -8,7 +8,7 @@ async function main() {
     //ox0000 would not work
     await upgrades.admin.transferProxyAdminOwnership(
       process.env.PROXY_IMPLEMENT_ADDRESS,
-      process.env.PROXY_NEW_OWNER
+      process.env.TIMELOCK_ADDRESS
     );
     
     

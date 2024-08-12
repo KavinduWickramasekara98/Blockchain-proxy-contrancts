@@ -19,7 +19,7 @@ describe("V2 test proxy functionality", function () {
  
    it("V2 retrive returns a increment value previosly initialized", async function () {
     await boxV2.increment();
-     expect((await boxV2.retrieve()).toString()).to.equal("1");
+     expect((await boxV2.retrieve()).toString()).to.equal("11");
    });
 
 });

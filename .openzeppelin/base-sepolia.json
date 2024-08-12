@@ -31,6 +31,30 @@
         },
         "namespaces": {}
       }
+    },
+    "4c292ef97c17d0fe48a2bc6d7d72efe0c6531344195f523179264427f5a2b96e": {
+      "address": "0x8ff01c90608f429A66917B141bbaF7dE2083d9ca",
+      "txHash": "0x8a2ea07a9eb05054b0bea344ecc5ec260008c9823e69c2edb48d36c3be79fb1a",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "value",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "BoxV2",
+            "src": "contracts\\BoxV2.sol:7"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
     }
   }
 }
