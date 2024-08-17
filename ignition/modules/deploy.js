@@ -3,6 +3,16 @@ async function main(){
     console.log("Box contract is deployed");
     const box = await upgrades.deployProxy(Box,[10],{initializer:"store"})
     console.log("proxy contract deployed address : "+await box.getAddress());
+    console.log(
+      "get Implementation address : " +
+        (await upgrades.erc1967.getImplementationAddress(
+          await box.getAddress()
+        ))
+    );
+    console.log(
+      "Admin Address : " +
+        (await upgrades.erc1967.getAdminAddress(await box.getAddress()))
+    );
 }
 
 main()
